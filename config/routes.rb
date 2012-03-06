@@ -1,4 +1,7 @@
 Workflowit::Application.routes.draw do
+  resource :steps, only: [:new, :create]
+  root to: 'steps#new'
+
   match '/ui(/:action)', controller: 'ui'
 
   # The priority is based upon order of creation:
